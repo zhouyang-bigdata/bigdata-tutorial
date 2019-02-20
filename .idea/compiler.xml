@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="es-tutorial" />
+        <module name="hadoop2-demo" />
+        <module name="hbase-tutorial" />
+        <module name="hive-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bigdata-tutorial" target="1.7" />
+      <module name="es-tutorial" target="1.7" />
+      <module name="hadoop2-demo" target="1.7" />
+      <module name="hbase-tutorial" target="1.7" />
+      <module name="hive-demo" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+Manifest-Version: 1.0
+Class-Path: hbase-annotations-0.98.9-hadoop2.jar hadoop-auth-2.5.2.jar
+  hadoop-mapreduce-client-app-2.2.0.jar hadoop-mapreduce-client-shuffl
+ e-2.5.2.jar jackson-mapper-asl-1.9.13.jar velocity-1.7.jar aopallianc
+ e-1.0.jar jsp-api-2.1-6.1.14.jar stringtemplate-3.2.1.jar hbase-hadoo
+ p2-compat-0.98.9-hadoop2.jar hadoop-yarn-common-2.5.2.jar httpcore-4.
+ 1.2.jar log4j-1.2.17.jar avro-ipc-1.7.1.jar jetty-6.1.26.jar hadoop-m
+ apreduce-client-jobclient-2.5.2.jar commons-el-1.0.jar hadoop-mapredu
+ ce-client-core-2.5.2.jar slf4j-log4j12-1.7.5.jar hive-common-0.12.0.j
+ ar jcodings-1.0.8.jar commons-compress-1.4.1.jar hive-shims-0.12.0.ja
+ r hadoop-yarn-api-2.5.2.jar antlr-3.4.jar leveldbjni-all-1.8.jar jsch
+ -0.1.42.jar asm-3.1.jar datanucleus-core-3.2.2.jar mockito-all-1.8.2.
+ jar commons-net-3.1.jar jamon-runtime-2.3.1.jar findbugs-annotations-
+ 1.3.9-1.jar jersey-client-1.9.jar jackson-core-asl-1.9.13.jar snappy-
+ 0.2.jar commons-math-2.1.jar servlet-api-2.5.jar jersey-json-1.9.jar 
+ guice-3.0.jar hbase-common-0.98.9-hadoop2-tests.jar hbase-prefix-tree
+ -0.98.9-hadoop2.jar snappy-java-1.0.4.1.jar guice-servlet-3.0.jar had
+ oop-annotations-2.5.2.jar api-asn1-api-1.0.0-M20.jar paranamer-2.3.ja
+ r jline-0.9.94.jar servlet-api-2.5-6.1.14.jar hive-exec-0.12.0.jar ja
+ vax.inject-1.jar jersey-server-1.9.jar xmlenc-0.52.jar commons-collec
+ tions-3.2.1.jar hadoop-yarn-server-nodemanager-2.5.2.jar commons-math
+ 3-3.1.1.jar json-20090211.jar ST4-4.0.4.jar commons-pool-1.5.4.jar ja
+ xb-api-2.2.2.jar derby-10.4.2.0.jar hadoop-client-2.2.0.jar zookeeper
+ -3.4.6.jar hadoop-common-2.5.2.jar jackson-jaxrs-1.8.8.jar antlr-2.7.
+ 7.jar hadoop-mapreduce-client-common-2.5.2.jar fastjson-1.2.4.jar hba
+ se-hadoop-compat-0.98.9-hadoop2.jar antlr-runtime-3.4.jar xz-1.0.jar 
+ commons-lang-2.6.jar netty-3.6.2.Final.jar hadoop-yarn-server-common-
+ 2.5.2.jar commons-beanutils-core-1.8.0.jar jackson-xc-1.9.13.jar comm
+ ons-logging-1.1.1.jar jdo-api-3.0.1.jar JavaEWAH-0.3.2.jar commons-co
+ nfiguration-1.6.jar commons-daemon-1.0.13.jar api-util-1.0.0-M20.jar 
+ hbase-client-0.98.9-hadoop2.jar bonecp-0.7.1.RELEASE.jar hive-metasto
+ re-0.12.0.jar jersey-guice-1.9.jar stax-api-1.0-2.jar hive-serde-0.12
+ .0.jar java-xmlbuilder-0.4.jar jsp-2.1-6.1.14.jar jetty-util-6.1.26.j
+ ar tools.jar avro-mapred-1.7.1.jar servlet-api-2.5-20081211.jar libth
+ rift-0.9.0.jar apacheds-kerberos-codec-2.0.0-M15.jar commons-digester
+ -1.8.jar avro-1.7.4.jar hbase-common-0.98.9-hadoop2.jar high-scale-li
+ b-1.1.1.jar datanucleus-api-jdo-3.2.1.jar htrace-core-2.04.jar jta-1.
+ 1.jar jaxb-impl-2.2.3-1.jar commons-io-2.1.jar metrics-core-2.2.0.jar
+  apacheds-i18n-2.0.0-M15.jar jersey-core-1.9.jar datanucleus-rdbms-3.
+ 2.1.jar httpclient-4.1.2.jar hbase-server-0.98.9-hadoop2.jar jets3t-0
+ .9.0.jar jetty-sslengine-6.1.26.jar joni-2.1.2.jar jasper-compiler-5.
+ 5.23.jar slf4j-api-1.7.5.jar commons-logging-api-1.0.4.jar hadoop-hdf
+ s-2.5.2.jar commons-codec-1.4.jar libfb303-0.9.0.jar javolution-5.5.1
+ .jar commons-beanutils-1.7.0.jar commons-httpclient-3.1.jar hbase-pro
+ tocol-0.98.9-hadoop2.jar commons-cli-1.2.jar hadoop-yarn-client-2.5.2
+ .jar jettison-1.1.jar activation-1.1.jar jasper-runtime-5.5.23.jar js
+ p-api-2.1.jar guava-11.0.2.jar protobuf-java-2.5.0.jar jsr305-1.3.9.j
+ ar
+Main-Class: com.micmiu.hadoop.hdfs.demo.HdfsClient
+
