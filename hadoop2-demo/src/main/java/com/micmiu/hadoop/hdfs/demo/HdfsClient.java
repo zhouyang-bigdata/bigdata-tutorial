@@ -20,12 +20,13 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Date;
 
-/**
- * HDFS java客户端的基本操作
- * User: <a href="http://micmiu.com">micmiu</a>
- * Date: 6/8/2015
- * Time: 13:52
- */
+/*
+ * @Author zhouyang
+ * @Description TODO HDFS java客户端的基本操作
+ * @Date 14:14 2019/2/27
+ * @Param
+ * @return
+ **/
 public class HdfsClient {
 
 	private static Configuration conf = null;
@@ -33,7 +34,7 @@ public class HdfsClient {
 
 
 	public HdfsClient() {
-		System.setProperty("HADOOP_USER_NAME", "hdfs");
+		System.setProperty("HADOOP_USER_NAME", "root");
 		conf = new Configuration();
 		conf.addResource("edh/core-site.xml");
 		conf.addResource("edh/hdfs-site.xml");
@@ -53,31 +54,37 @@ public class HdfsClient {
 		String splitStr = "-----------------------------";
 
 		System.out.println(splitStr);
+		//client信息
 		client.printInfo();
 
 		System.out.println(splitStr);
-		client.checkFileExist();
+		String pathuri = "hdfs:///user/zhouyang/test-data";
+		String newFileName = "create1.txt";
+		//判断路径是否存在
+		client.checkFileExist(pathuri, newFileName);
 
 		System.out.println(splitStr);
-		String pathuri = "hdfs://edatans/user/root/micmiu/newdir";
-//		client.mkdir(pathuri);
+		//创建路径
+		client.mkdir(pathuri);
 
 		System.out.println(splitStr);
-		String filepath = "hdfs://test-data/create.txt";
+		String filepath = "hdfs:///user/zhouyang/test-data/create2.txt";
+		//创建文件2
 		client.createFile(filepath);
 
 		System.out.println(splitStr);
+		//读文件
 		client.readFile(filepath);
 
 		System.out.println(splitStr);
 		client.getFileBlockLocation(filepath);
 
 		System.out.println(splitStr);
-		pathuri = "hdfs://test-data/";
 		client.listAllFile(pathuri, true);
 
 		System.out.println(splitStr);
-		client.putFileToHDFS("/home/taima/test-data/localtest.txt", "hdfs://test-data/");
+		//本地上传新文件
+		client.putFileToHDFS("D:\\test\\hadoop\\person.txt", "hdfs:///user/zhouyang/test-data/person.txt");
 
 		fs.close();
 
@@ -106,11 +113,11 @@ public class HdfsClient {
 	 * @Param []
 	 * @return
 	 **/
-	public void checkFileExist() throws Exception {
-		String pathuri = "hdfs://edatans/user/root/micmiu/demo";
+	public void checkFileExist(String pathuri, String newFileName) throws Exception {
+
 		Path path = new Path(pathuri);
 		System.out.println(pathuri + " exist :" + fs.exists(path));
-		pathuri = "hdfs://edatans/user/root/micmiu/temp";
+		pathuri = pathuri + "/" + newFileName;
 		path = new Path(pathuri);
 		System.out.println(pathuri + " exist :" + fs.exists(path));
 	}

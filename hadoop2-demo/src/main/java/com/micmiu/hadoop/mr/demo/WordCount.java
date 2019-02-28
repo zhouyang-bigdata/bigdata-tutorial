@@ -64,6 +64,11 @@ public class WordCount {
 
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
+		System.setProperty("HADOOP_USER_NAME", "root");
+
+		conf.addResource("edh/core-site.xml");
+		conf.addResource("edh/hdfs-site.xml");
+
 		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 		if (otherArgs.length != 2) {
 			System.err.println("Usage: wordcount <in> <out>");

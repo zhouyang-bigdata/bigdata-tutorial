@@ -22,7 +22,7 @@
 
 ## es-tutorial ##
  elasticsearch query demo.
- 
+
 ## hbase-tutorial ##
  Hbase API demos:
  + HBaseConnPoolManager  : 连接池
@@ -30,7 +30,23 @@
  + HBaseDMLHandler       : HBase Java demo for DML
  + RegionObserverDemo    : HBase coprocessor demo
  + EnvViewer             : HBase coprocessor for get environment
- 
+
 ## ...... ##
 
+问题汇总
 
+(1)提示：
+
+###### org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
+
+解决：
+
+下载对应版本的hadoop.dll，加入到hadoop/bin目录
+
+（2）提示：
+
+没有winutils。
+
+解决：
+
+下载对应版本的winutils，加入到hadoop/bin目录

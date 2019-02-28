@@ -1,162 +1,57 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-<!-- Licensed to the Apache Software Foundation (ASF) under one or more       -->
-<!-- contributor license agreements.  See the NOTICE file distributed with    -->
-<!-- this work for additional information regarding copyright ownership.      -->
-<!-- The ASF licenses this file to You under the Apache License, Version 2.0  -->
-<!-- (the "License"); you may not use this file except in compliance with     -->
-<!-- the License.  You may obtain a copy of the License at                    -->
-<!--                                                                          -->
-<!--     http://www.apache.org/licenses/LICENSE-2.0                           -->
-<!--                                                                          -->
-<!-- Unless required by applicable law or agreed to in writing, software      -->
-<!-- distributed under the License is distributed on an "AS IS" BASIS,        -->
-<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. -->
-<!-- See the License for the specific language governing permissions and      -->
-<!-- limitations under the License.                                           -->
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-
-  <property>
-    <name>dfs.ha.namenodes.edatans</name>
-    <value>nn2</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.rpc-address.edatans.nn1</name>
-    <value>node1:8020</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.rpc-address.edatans.nn2</name>
-    <value>node2:8020</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.http-address.edatans.nn1</name>
-    <value>node1:50070</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.http-address.edatans.nn2</name>
-    <value>node2:50070</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.shared.edits.dir.edatans</name>
-    <value>qjournal://node1:8485;node2:8485</value>
-  </property>
-
-  <property>
-    <name>dfs.client.failover.proxy.provider.edatans</name>
-    <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
-  </property>
-
-  <property>
-    <name>dfs.hosts.exclude</name>
-    <value>/etc/hdfs1/conf/exclude-list.txt</value>
-  </property>
-  <property>
-    <name>dfs.client.read.shortcircuit</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>dfs.domain.socket.path</name>
-    <value>/var/run/hdfs1/dn_socket</value>
-  </property>
-
-  <property>
-    <name>dfs.journalnode.rpc-address</name>
-    <value>0.0.0.0:8485</value>
-  </property>
-
-  <property>
-    <name>dfs.journalnode.http-address</name>
-    <value>0.0.0.0:8480</value>
-  </property>
-
-  <property>
-    <name>dfs.datanode.address</name>
-    <value>0.0.0.0:50010</value>
-  </property>
-
-  <property>
-    <name>dfs.datanode.http.address</name>
-    <value>0.0.0.0:50075</value>
-  </property>
-
-  <property>
-    <name>dfs.datanode.ipc.address</name>
-    <value>0.0.0.0:50020</value>
-  </property>
-
-  <property>
-    <name>dfs.block.local-path-access.user</name>
-    <value>root,hdfs,mapred,hbase,hive</value>
-  </property>
-  <property>
-    <name>dfs.client.socket-timeout</name>
-    <value>120000</value>
-  </property>
-  <property>
-    <name>dfs.datanode.balance.bandwidthPerSec</name>
-    <value>104857600</value>
-  </property>
-  <property>
-    <name>dfs.datanode.data.dir</name>
-    <value>/mnt/temp/hadoop/data,/mnt/disk1/hadoop/data,/mnt/disk2/hadoop/data</value>
-  </property>
-  <property>
-    <name>dfs.datanode.data.dir.perm</name>
-    <value>755</value>
-  </property>
-  <property>
-    <name>dfs.datanode.handler.count</name>
-    <value>100</value>
-  </property>
-  <property>
-    <name>dfs.ha.automatic-failover.enabled</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>dfs.ha.fencing.methods</name>
-    <value>shell(/bin/true)</value>
-  </property>
-  <property>
-    <name>dfs.journalnode.edits.dir</name>
-    <value>/hadoop/journal</value>
-  </property>
-  <property>
-    <name>dfs.namenode.checkpoint.dir</name>
-    <value>/hadoop/namesecondary</value>
-  </property>
-  <property>
-    <name>dfs.namenode.handler.count</name>
-    <value>100</value>
-  </property>
-  <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>/hadoop/hadoop_image,/hadoop/namenode_dir</value>
-  </property>
-  <property>
-    <name>dfs.nameservices</name>
-    <value>edatans</value>
-  </property>
-  <property>
-    <name>dfs.permissions.superusergroup</name>
-    <value>hbase</value>
-  </property>
-  <property>
-    <name>dfs.support.append</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>dfs.webhdfs.enabled</name>
-    <value>true</value>
-  </property>
-  <property>
-    <name>license.zookeeper.quorum</name>
-    <value>node2:2291,node1:2291</value>
-  </property>
+                <property>
+                        <!-- 数据备份数3 -->
+               		<name>dfs.replication</name>
+                        <value>1</value>
+                </property>
+                <property>
+                    	<!-- nameNode 节点的本地元数据备份目录-->
+                	<name>dfs.name.dir</name>
+                        <value>file:/home/taima/software-package/hadoop-2.6.4/dfs/dfs/name</value>
+                </property>
+                <property>
+                        <name>dfs.data.dir</name>
+                        <value>file:/home/taima/software-package/hadoop-2.6.4/dfs/dfs/data</value>
+                </property>
+		<property>
+		        <!-- nameNode 默认256-->
+                        <name>dfs.datanode.max.xcievers</name>
+                        <value>4096</value>
+               </property>
+               <property>
+               		<!-- 默认10-->
+               		<name>dfs.namenode.handler.count</name>
+               		<value>30</value>	
+	       </property>
+	       <property>
+	               <name>dfs.client.block.write.replace-datanode-on-failure.enable</name>        
+	       	       <value>true</value>
+	       </property>
+	       <property>
+	           <name>dfs.client.block.write.replace-datanode-on-failure.policy</name>
+	           <value>NEVER</value>
+	       </property>
+	       <property>
+	                               <!-- 默认10-->
+                        <name>dfs.datanode.handler.count</name>
+                        <value>30</value>       
+               </property>
 </configuration>
